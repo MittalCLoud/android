@@ -123,6 +123,7 @@ android {
             debug {
                 testCoverageEnabled(project.hasProperty('coverage'))
             }
+
         }
 
         productFlavors {
