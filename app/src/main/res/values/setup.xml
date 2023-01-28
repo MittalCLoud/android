@@ -5,7 +5,7 @@
     <bool name="dev_version_direct_download_enabled">false</bool>
 
     <!-- App name  and other strings-->
-    <string name="app_name">Nextcloud</string>
+    <string name="app_name">Mittal Cloud</string>
     <string name="account_type">nextcloud</string>     <!-- better if was a domain name; but changing it now would require migrate accounts when the app is updated -->
     <string name="authority">org.nextcloud</string>    <!-- better if was the app package with ".provider" appended ; it identifies the provider -->
     <string name="users_and_groups_search_authority">com.nextcloud.android.providers.UsersAndGroupsSearchProvider</string>
@@ -21,7 +21,7 @@
     <string name="only_office_user_agent">Mozilla/5.0 (Android %1$s) Mobile Nextcloud-android/%2$s</string>
 
     <!-- URLs and flags related -->
-    <bool name="show_server_url_input">true</bool>
+    <bool name="show_server_url_input">false</bool>
     <bool name="show_provider_or_own_installation">true</bool>
     <string name="provider_registration_server">https://www.nextcloud.com/register</string>
 
@@ -74,8 +74,8 @@
     <bool name="license_enabled">true</bool>
     <string name="license_url" translatable="false">https://www.gnu.org/licenses/gpl-2.0.html</string>
     <string name="url_imprint"></string>
-    <string name="url_app_download">"https://play.google.com/store/apps/details?id=com.nextcloud.client"</string>
-    <string name="url_server_install">https://nextcloud.com/install</string>
+    <string name="url_app_download">"https://github.com/mittalCLoud/android"</string>
+    <string name="url_server_install">https://mittaldrive.mynetgear.com</string>
 
     <!-- synced folder light; if enabled: move to setting & global upload settings -->
     <bool name="syncedFolder_light">false</bool>
@@ -90,17 +90,17 @@
     <!-- Determine is participate enabled -->
     <bool name="participate_enabled">true</bool>
     <!-- Participate links -->
-    <string name="fdroid_beta_link" translatable="false">https://f-droid.org/repository/browse/?fdid=com.nextcloud.android.beta</string>
-    <string name="beta_apk_link" translatable="false">https://download.nextcloud.com/android/dev/latest.apk</string>
-    <string name="play_store_register_beta" translatable="false">https://play.google.com/apps/testing/com.nextcloud.client</string>
-    <string name="fdroid_link" translatable="false">https://f-droid.org/repository/browse/?fdid=com.nextcloud.client</string>
-    <string name="help_link" translatable="false">https://help.nextcloud.com/c/clients/android</string>
+    <string name="fdroid_beta_link" translatable="false">https://github.com/MittalCLoud/android/releases/</string>
+    <string name="beta_apk_link" translatable="false">hhttps://github.com/MittalCLoud/android/releases/</string>
+    <string name="play_store_register_beta" translatable="false">https://github.com/MittalCLoud/android/releases/</string>
+    <string name="fdroid_link" translatable="false">https://github.com/MittalCLoud/android/releases/</string>
+    <string name="help_link" translatable="false">https://mittaldrive.mynetgear.com/help</string>
     <string name="translation_link" translatable="false">https://www.transifex.com/nextcloud/nextcloud/android/</string>
-    <string name="contributing_link" translatable="false">https://github.com/nextcloud/android/blob/master/CONTRIBUTING.md</string>
+    <string name="contributing_link" translatable="false">https://github.com/mittalCLoud/android/blob/main/CONTRIBUTING.md</string>
     <!-- For semi-automated bug report creation -->
-    <string name="report_issue_link" translatable="false">https://github.com/nextcloud/android/issues/new?labels=bug&amp;body=%1$s</string>
+    <string name="report_issue_link" translatable="false">https://github.com/mittalCLoud/android/issues/new?labels=bug&amp;body=%1$s</string>
     <!-- For manual report from user -->
-    <string name="report_issue_empty_link" translatable="false">https://github.com/nextcloud/android/issues/new/choose</string>
+    <string name="report_issue_empty_link" translatable="false">https://github.com/mittalCLoud/android/issues/new/choose</string>
 
     <!-- login data links -->
     <string name="login_data_own_scheme" translatable="false">nc</string>
