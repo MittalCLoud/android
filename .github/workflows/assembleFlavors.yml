@@ -14,6 +14,8 @@ jobs:
         runs-on: ubuntu-latest
         strategy:
             fail-fast: false
+            matrix:
+                flavor: [ Release, Debug ]
         steps:
             -   uses: actions/checkout@755da8c3cf115ac066823e79a1e1788f8940201b # v3
             -   name: set up JDK 11
@@ -21,7 +23,6 @@ jobs:
                 with:
                     distribution: "temurin"
                     java-version: 11
-            -   name: Build Release
+            -   name: Build ${{ matrix.flavor }}
                 run: |
-                    echo "org.gradle.jvmargs=-Xmx2g -XX:MaxMetaspaceSize=512m -XX:+HeapDumpOnOutOfMemoryError" >> gradle.properties
-                    ./gradlew assembleRelease
+                    ./gradlew assemble${{ matrix.flavor }}
