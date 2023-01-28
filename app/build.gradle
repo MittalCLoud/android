@@ -117,13 +117,29 @@ android {
         // adapt structure from Eclipse to Gradle/Android Studio expectations;
         // see http://tools.android.com/tech-docs/new-build-system/user-guide#TOC-Configuring-the-Structure
 
-        flavorDimensions "default"
-
-        buildTypes {
-            debug {
-                testCoverageEnabled(project.hasProperty('coverage'))
+        signingConfigs {
+            release {
+                storeFile file("releasekey.jks")
+                storePassword '1048383'
+                keyAlias 'key0'
+                keyPassword '1048383'
             }
         }
+
+        buildTypes {
+            release {
+                signingConfig signingConfigs.release
+                minifyEnabled true
+                debuggable false
+            }
+            debug {
+                testCoverageEnabled(project.hasProperty('coverage'))
+                signingConfig signingConfigs.debug
+
+            }
+
+        }
+        flavorDimensions "default"
 
         productFlavors {
             // used for f-droid
