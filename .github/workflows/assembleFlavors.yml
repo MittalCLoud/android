@@ -23,6 +23,7 @@ jobs:
                 with:
                     distribution: "temurin"
                     java-version: 11
-            -   name: Build ${{ matrix.flavor }}
-                run: |
-                    ./gradlew assemble${{ matrix.flavor }}
+            -   name: Build Project
+                run: ./gradlew assemble
+            -name Build ${{ matrix.flavor }}
+                run: ./gradlew assemble${{ matrix.flavor }}
