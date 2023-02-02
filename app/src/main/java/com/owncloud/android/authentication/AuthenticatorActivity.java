@@ -469,21 +469,9 @@ public class AuthenticatorActivity extends AccountAuthenticatorActivity
                     accountSetupWebviewBinding.loginWebview.loadData(customError, "text/html; charset=UTF-8", null);
                 }
 
-                if (errorCode >= 400 && errorCode < 500) {
-                    Log_OC.w(TAG, "WebView failed with error code " + errorCode + "; remove key chain aliases");
-                    // chosen client certificate alias does not seem to work -> discard it
-                    try {
-                        URL url = new URL(failingUrl);
-                        new AdvancedX509KeyManager(getApplicationContext()).removeKeys(url.getHost(), url.getPort());
-                    } catch (MalformedURLException e) {
-                        Log_OC.e(TAG, "Malformed URL: " + failingUrl);
-                    }
-                }
+
             }
-            @Override
-            public void onReceivedClientCertRequest(WebView view, ClientCertRequest request) {
-                new AdvancedX509KeyManager(getApplicationContext()).handleWebViewClientCertRequest(request);
-            }
+
         });
     }
 
